@@ -8,7 +8,7 @@ and move forward until wall appears on left again
 ## Example usage
 `roslaunch stdr_launchers server_with_map_and_gui_plus_robot.launch`
 to start the simulator.  Run a reactive command sequence with:
-`rosrun stdr_nodes heading_seice`
+`rosrun stdr_nodes heading_service`
 `rosrun stdr_control reactive_commander`
 
 Alternatively, run:
