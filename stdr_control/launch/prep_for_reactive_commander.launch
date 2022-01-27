@@ -1,0 +1,8 @@
+<launch>
+  <!-- prepare the other nodes before launching reactive commander. -->
+  <include file="$(find stdr_launchers)/launch/server_with_map_and_gui_plus_robot.launch" />
+  <node pkg="stdr_nodes" type="heading_service" name="heading_service" />
+  <node pkg="left_lidar_alarm" type="left_lidar_alarm" name="left_lidar_alarm_node" />
+  <node pkg="right_lidar_alarm" type="right_lidar_alarm" name="right_lidar_alarm_node" />
+  
+</launch>

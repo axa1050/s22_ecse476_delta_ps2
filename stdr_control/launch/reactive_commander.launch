@@ -1,0 +1,10 @@
+<launch>
+	
+  <node pkg="stdr_control" type="reactive_commander" name="reactive_commander" />
+
+</launch>  
+
+
+
+
+  

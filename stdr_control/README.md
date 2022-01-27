@@ -11,11 +11,19 @@ to start the simulator.  Run a reactive command sequence with:
 `rosrun stdr_nodes heading_seice`
 `rosrun stdr_control reactive_commander`
 
+Alternatively, run:
+`roslaunch stdr_control prep_for_reactive_commander.launch`
+`roslaunch stdr_control reactive_commander.launch`
+
+
 ## Directory structure
 ```
 .
 ├── CMakeLists.txt
 ├── package.xml
+├── launch
+    └── prep\_for\_reactive_commander.launch  The launch file to prepare the other nodes before reactive commander
+    └── reactive_commander.launch  The launch file for just runnning the reactive commander.
 ├── README.md
 └── src
     └── reactive_commander.cpp  The code for running wall following
