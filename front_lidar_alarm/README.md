@@ -18,4 +18,14 @@ Start the lidar alarm node:
  `rosrun front_lidar_alarm front_lidar_alarm`
  Have the controller code monitor the `front_lidar_alarm` topic and do something intelligent with the information.
 
+ 
+  ## Directory structure
+```
+.
+├── CMakeLists.txt
+├── package.xml
+├── README.md
+└── src
+    └── front_lidar_alarm.cpp  The code for the front side lidar alarm
+    
     
