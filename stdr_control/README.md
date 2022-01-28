@@ -29,4 +29,17 @@ Alternatively, run:
     └── reactive_commander.cpp  The code for running wall following
 ```
 
-    
+
+## Observations
+- The shape of the region of obstacle check is important. The single lidar check is fast but not reliable or even sufficient for the task. The disk piece region can be sufficient but not reliable for smaller scale obstacles. The rectangle box implementation is both reliable and for our purposes sufficiently fast. 
+- The scale of the obstacle check region is important. The scale both determines which obstacles can be detected as robot apporaches and how different lidar readings are handled together. On first point, it affects how tunnels or step shaped obstacles are seen. On second point, for example a long frontal detection region will detect the wall and the robot will rotate so that wall is on the left but a short side detection region will not recognize the wall since the wall is outside of its region.   
+
+
+## Suggestions
+- Package users should check the parameters and make adjustments on the rectangle region as needed in order to fit their use case.
+
+
+## Possible future work
+- [ ] Making nodes scopable so they can be used for different robots 
+- [ ] Making nodes to be usable for multiple robots simultaneously
+- [ ] Parametrize the nodes and their launch files for terminal outputs, publishing information options etc
